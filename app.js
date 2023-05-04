@@ -2,10 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res)=>{
-    res.send('Hello world!')
-})
+const userRoute = require('./routes/User');
 
-app.listen(port, ()=>{
-    console.log(`Aplicação rodando na porta ${port}`)
+app.use('/user', userRoute)
+
+app.listen(port, () => {
+    console.log(`Application running on port http://localhost:${port}`)
 })

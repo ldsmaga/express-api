@@ -4,4 +4,4 @@
 
 - Used to learn and experiment
 
-- Using documentation as mainly source of information
+- Using documentation as main source of information
