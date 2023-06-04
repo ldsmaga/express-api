@@ -20,6 +20,7 @@ router.post("/create", async (req, res) => {
     if (data) return res.send({ error: "User already taken" });
     
     Users.create({ email, password }).then((data)=>{
+        data.password = undefined;
         return res.send(data)
     });
   });
